@@ -1,5 +1,5 @@
-import React, { ButtonHTMLAttributes, MouseEvent } from "react";
-import "98.css";
+import React, { ButtonHTMLAttributes, MouseEvent } from 'react';
+import '98.css';
 
 export interface ButtonProps {
   label: string;
@@ -14,10 +14,15 @@ export const Button = ({
   disabled,
   label,
   onClick,
-  buttonHTMLAttributes
+  buttonHTMLAttributes,
 }: ButtonProps) => {
   return (
-    <button disabled={disabled} className={className} onClick={onClick} {...buttonHTMLAttributes}>
+    <button
+      disabled={disabled}
+      className={className}
+      onClick={onClick}
+      {...buttonHTMLAttributes}
+    >
       {label}
     </button>
   );

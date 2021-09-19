@@ -1,5 +1,5 @@
-import React, { InputHTMLAttributes } from "react";
-import "98.css";
+import React, { InputHTMLAttributes } from 'react';
+import '98.css';
 
 export interface CheckboxProps {
   id: string;
