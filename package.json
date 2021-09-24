@@ -2,6 +2,7 @@
   "name": "react-winplaza-98",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "98.css": "^0.1.17",
     "@testing-library/jest-dom": "^5.11.4",
