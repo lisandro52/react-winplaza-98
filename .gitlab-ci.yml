@@ -7,10 +7,10 @@ build:
   stage: build
   script:
     - yarn install      # Run `yarn install` and `yarn build`
-    - yarn build
+    - yarn run build-storybook
   artifacts:
     paths:
-      - build/          # Save the build result as an artfact
+      - storybook-static/          # Save the build result as an artfact
 
 pages:
   image: alpine:latest
@@ -19,7 +19,7 @@ pages:
     GIT_STRATEGY: none        # Do not clone git repo
   script:
     # Rename the CRA `build` folder to `public`
-    - mv build public         
+    - mv storybook-static public         
   artifacts:
     paths:
       - public
