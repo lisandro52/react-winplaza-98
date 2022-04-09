@@ -1,5 +1,7 @@
+import '98.css';
+
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
     matchers: {
       color: /(background|color)$/i,
@@ -11,20 +13,16 @@ export const parameters = {
     values: [
       {
         name: 'win98',
-        value: '#c0c0c0'
+        value: '#c0c0c0',
       },
       {
         name: 'white',
-        value: '#ffffff'
-      }
-    ]
-  }
-}
+        value: '#ffffff',
+      },
+    ],
+  },
+};
 
 export const decorators = [
-  (story) => (
-    <div style={{margin: '3em'}}>
-      {story()}  
-    </div>
-  )
-]
+  (story) => <div style={{ margin: '3em' }}>{story()}</div>,
+];

@@ -1,14 +1,19 @@
 import React from 'react';
+import WindowBody from './window-body';
 
 export interface WindowProps {
+  title: React.ReactElement;
+  statusBar?: React.ReactNode;
   width?: string | number;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
-const Window = ({ width, children }: WindowProps) => {
+export const Window = ({ title, statusBar, width, children }: WindowProps) => {
   return (
     <div className="window" style={{ width }}>
-      {children}
+      {title}
+      <WindowBody>{children}</WindowBody>
+      {statusBar}
     </div>
   );
 };

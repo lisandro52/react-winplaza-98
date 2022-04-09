@@ -1,6 +1,6 @@
 import React from 'react';
-import { ButtonProps, Button } from './Button';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
+import Button, { ButtonProps } from './Button';
 
 export default {
   component: Button,

@@ -16,7 +16,7 @@ export const Primary = () => {
       disabled={boolean('Disabled', false)}
       label={text('Textbox label', 'Textbox example')}
       style={{
-        width: 200
+        width: 200,
       }}
     />
   );

@@ -3,10 +3,11 @@ import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 import Window from './window';
 import WindowTitle, {
   CloseButton,
+  HelpButton,
   MaximizeButton,
   MinimizeButton,
+  RestoreButton,
 } from './window-title';
-import WindowBody from './window-body';
 import WindowStatusBar, { StatusBarField } from './window-status-bar';
 
 export default {
@@ -15,30 +16,82 @@ export default {
   decorators: [withKnobs],
 };
 
-export const Primary = () => {
+export const FullWindow = () => {
   return (
-    <Window width={300}>
-      <WindowTitle
-        inactive={boolean('Inactive', false)}
-        title={text('Window title', 'A window title')}
-      >
-        <MinimizeButton />
-        <MaximizeButton />
-        <CloseButton />
-      </WindowTitle>
-      <WindowBody>
-        <p> There are just so many possibilities:</p>
-        <ul>
-          <li>A Task Manager</li>
-          <li>A Notepad</li>
-          <li>Or even a File Explorer!</li>
-        </ul>
-      </WindowBody>
-      <WindowStatusBar>
-        <StatusBarField>Press F1 for help</StatusBarField>
-        <StatusBarField>Slide 1</StatusBarField>
-        <StatusBarField>CPU Usage: 14%</StatusBarField>
-      </WindowStatusBar>
+    <Window
+      title={
+        <WindowTitle
+          inactive={boolean('Inactive', false)}
+          title={text('Window title', 'A window title')}
+        >
+          <MinimizeButton />
+          <MaximizeButton />
+          <CloseButton />
+        </WindowTitle>
+      }
+      statusBar={
+        <WindowStatusBar>
+          <StatusBarField>Press F12 for help</StatusBarField>
+          <StatusBarField>Slide 1</StatusBarField>
+          <StatusBarField>CPU Usage: 14%</StatusBarField>
+        </WindowStatusBar>
+      }
+      width={300}
+    >
+      <p> There are just so many possibilities:</p>
+      <ul>
+        <li>A Task Manager</li>
+        <li>A Notepad</li>
+        <li>Or even a File Explorer!</li>
+      </ul>
     </Window>
+  );
+};
+
+export const AWindowTitle = () => {
+  return (
+    <>
+      <p>
+        The window title has a 'title' prop and accepts different kinds of
+        buttons:
+      </p>
+      <Window
+        width={300}
+        title={
+          <WindowTitle
+            inactive={boolean('Inactive', false)}
+            title={text('Window title', 'A window title')}
+          >
+            <MinimizeButton />
+            <MaximizeButton />
+            <CloseButton />
+          </WindowTitle>
+        }
+      />
+      <Window
+        width={300}
+        title={
+          <WindowTitle
+            inactive={boolean('Inactive', false)}
+            title={text('Window title', 'A window title')}
+          >
+            <HelpButton />
+            <CloseButton />
+          </WindowTitle>
+        }
+      />
+      <Window
+        width={300}
+        title={
+          <WindowTitle
+            inactive={boolean('Inactive', false)}
+            title={text('Window title', 'A window title')}
+          >
+            <RestoreButton />
+            <CloseButton />
+          </WindowTitle>
+        }
+      />
+    </>
   );
 };
