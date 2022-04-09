@@ -37,6 +37,9 @@ interface WindowBodyProps {
 }
 declare const WindowBody: ({ children }: WindowBodyProps) => JSX.Element;
 
+declare const StatusBarField: ({ children }: {
+    children: string;
+}) => JSX.Element;
 interface WindowStatusBarProps {
     children: React.ReactNode;
 }
@@ -57,4 +60,4 @@ interface WindowTitleProps {
 }
 declare const WindowTitle: ({ title, inactive, children }: WindowTitleProps) => JSX.Element;
 
-export { Button, Checkbox, CloseButton, HelpButton, MaximizeButton, MinimizeButton, RestoreButton, TextBox, Window, WindowBody, WindowStatusBar, WindowTitle };
+export { Button, Checkbox, CloseButton, HelpButton, MaximizeButton, MinimizeButton, RestoreButton, StatusBarField, TextBox, Window, WindowBody, WindowStatusBar, WindowTitle };
