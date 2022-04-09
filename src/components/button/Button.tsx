@@ -2,19 +2,19 @@ import React, { ButtonHTMLAttributes, MouseEvent } from 'react';
 import '98.css';
 
 export interface ButtonProps {
-  label: string;
   buttonHTMLAttributes?: ButtonHTMLAttributes<HTMLButtonElement>;
   className?: string;
   disabled?: boolean;
   onClick?: (e: MouseEvent) => void;
+  children: string;
 }
 
 export const Button = ({
   className,
   disabled,
-  label,
   onClick,
   buttonHTMLAttributes,
+  children,
 }: ButtonProps) => {
   return (
     <button
@@ -23,7 +23,7 @@ export const Button = ({
       onClick={onClick}
       {...buttonHTMLAttributes}
     >
-      {label}
+      {children}
     </button>
   );
 };

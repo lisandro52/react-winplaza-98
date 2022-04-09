@@ -10,8 +10,8 @@ export default {
 
 export const primary = () => {
   const props: ButtonProps = {
-    label: text('Label', 'Click me'),
     disabled: boolean('Disabled', false),
+    children: text('Label', 'Click me'),
   };
 
   return <Button {...props} />;
