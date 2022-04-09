@@ -8,7 +8,7 @@ export default {
   decorators: [withKnobs],
 };
 
-export const primary = () => {
+export const Primary = () => {
   const props: CheckboxProps = {
     id: 'checkbox',
     label: text('Label', 'This is a checkbox'),

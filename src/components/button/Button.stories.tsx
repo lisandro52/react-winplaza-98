@@ -8,7 +8,7 @@ export default {
   decorators: [withKnobs],
 };
 
-export const primary = () => {
+export const Primary = () => {
   const props: ButtonProps = {
     disabled: boolean('Disabled', false),
     children: text('Label', 'Click me'),
