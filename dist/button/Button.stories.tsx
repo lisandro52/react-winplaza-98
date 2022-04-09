@@ -1,6 +1,6 @@
 import React from 'react';
-import { ButtonProps, Button } from './Button';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
+import Button, { ButtonProps } from './Button';
 
 export default {
   component: Button,
@@ -8,10 +8,10 @@ export default {
   decorators: [withKnobs],
 };
 
-export const primary = () => {
+export const Primary = () => {
   const props: ButtonProps = {
-    label: text('Label', 'Click me'),
     disabled: boolean('Disabled', false),
+    children: text('Label', 'Click me'),
   };
 
   return <Button {...props} />;

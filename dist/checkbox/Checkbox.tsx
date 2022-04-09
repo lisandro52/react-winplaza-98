@@ -1,5 +1,4 @@
 import React, { InputHTMLAttributes } from 'react';
-import '98.css';
 
 export interface CheckboxProps {
   id: string;
@@ -10,7 +9,7 @@ export interface CheckboxProps {
   inputHTMLAttributes?: InputHTMLAttributes<HTMLInputElement>;
 }
 
-export const Checkbox = ({
+const Checkbox = ({
   id,
   label,
   checked,
@@ -32,3 +31,5 @@ export const Checkbox = ({
     </>
   );
 };
+
+export default Checkbox;

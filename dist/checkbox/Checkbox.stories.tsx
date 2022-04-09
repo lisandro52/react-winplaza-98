@@ -1,6 +1,6 @@
 import React from 'react';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
-import { Checkbox, CheckboxProps } from './Checkbox';
+import Checkbox, { CheckboxProps } from './Checkbox';
 
 export default {
   component: Checkbox,
@@ -8,7 +8,7 @@ export default {
   decorators: [withKnobs],
 };
 
-export const primary = () => {
+export const Primary = () => {
   const props: CheckboxProps = {
     id: 'checkbox',
     label: text('Label', 'This is a checkbox'),

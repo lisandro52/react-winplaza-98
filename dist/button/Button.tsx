@@ -1,29 +1,11 @@
-import React, { ButtonHTMLAttributes, MouseEvent } from 'react';
-import '98.css';
+import React from 'react';
 
-export interface ButtonProps {
-  label: string;
-  buttonHTMLAttributes?: ButtonHTMLAttributes<HTMLButtonElement>;
-  className?: string;
-  disabled?: boolean;
-  onClick?: (e: MouseEvent) => void;
+export interface ButtonProps extends React.ComponentProps<'button'> {
+  children: string;
 }
 
-export const Button = ({
-  className,
-  disabled,
-  label,
-  onClick,
-  buttonHTMLAttributes,
-}: ButtonProps) => {
-  return (
-    <button
-      disabled={disabled}
-      className={className}
-      onClick={onClick}
-      {...buttonHTMLAttributes}
-    >
-      {label}
-    </button>
-  );
+export const Button = ({ children, ...buttonProps }: ButtonProps) => {
+  return <button {...buttonProps}>{children}</button>;
 };
+
+export default Button;

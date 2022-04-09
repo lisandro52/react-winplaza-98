@@ -1,6 +1,16 @@
 {
   "name": "react-winplaza-98",
   "version": "0.1.0",
+  "description": "React components with a Win98 a e s t h e t i c. Based on the awesome 98.css",
+  "main": "./dist/index.ts",
+  "keywords": [
+    "react",
+    "vaporwave",
+    "ui-components",
+    "win98",
+    "98.css"
+  ],
+  "bugs": "https://github.com/lisandro52/react-winplaza-98",
   "private": false,
   "files": [
     "dist",
@@ -20,11 +30,11 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -75,6 +85,7 @@
     "@storybook/node-logger": "^6.4.20",
     "@storybook/preset-create-react-app": "^3.2.0",
     "@storybook/react": "^6.4.20",
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "eslint-plugin-react": "^7.29.4"
   }
 }
