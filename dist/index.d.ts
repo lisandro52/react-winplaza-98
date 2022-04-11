@@ -1,28 +1,22 @@
-import React, { InputHTMLAttributes } from 'react';
+import React from 'react';
 
 interface ButtonProps extends React.ComponentProps<'button'> {
     children: string;
 }
 declare const Button: ({ children, ...buttonProps }: ButtonProps) => JSX.Element;
 
-interface CheckboxProps {
+interface CheckboxProps extends React.ComponentProps<'input'> {
     id: string;
     label: string;
-    checked?: boolean;
-    disabled?: boolean;
-    name?: string;
-    inputHTMLAttributes?: InputHTMLAttributes<HTMLInputElement>;
 }
-declare const Checkbox: ({ id, label, checked, disabled, name, inputHTMLAttributes, }: CheckboxProps) => JSX.Element;
+declare const Checkbox: ({ id, label, ...inputHTMLAttributes }: CheckboxProps) => JSX.Element;
 
-interface TextBoxProps {
+interface TextBoxProps extends React.ComponentProps<'input'> {
     id: string;
     label?: string;
     stacked?: boolean;
-    disabled?: boolean;
-    style?: React.CSSProperties;
 }
-declare const TextBox: ({ id, label, stacked, disabled, style, }: TextBoxProps) => JSX.Element;
+declare const TextBox: ({ id, label, stacked, style, ...inputProps }: TextBoxProps) => JSX.Element;
 
 interface WindowProps {
     title: React.ReactElement;
