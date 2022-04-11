@@ -20,5 +20,6 @@ module.exports = {
     'no-console': 'warn',
     'react/prop-types': 0,
     'react/jsx-uses-react': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off'
   },
 };
