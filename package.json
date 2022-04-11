@@ -1,6 +1,6 @@
 {
   "name": "react-winplaza-98",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "React components with a Win98 a e s t h e t i c. Based on the awesome 98.css",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
