@@ -1,5 +1,4 @@
 import React from 'react';
-import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 import Window from './window';
 import WindowTitle, {
   CloseButton,
@@ -13,17 +12,13 @@ import WindowStatusBar, { StatusBarField } from './window-status-bar';
 export default {
   component: Window,
   title: 'Components/Window',
-  decorators: [withKnobs],
 };
 
 export const FullWindow = () => {
   return (
     <Window
       title={
-        <WindowTitle
-          inactive={boolean('Inactive', false)}
-          title={text('Window title', 'A window title')}
-        >
+        <WindowTitle>
           <MinimizeButton />
           <MaximizeButton />
           <CloseButton />
@@ -58,10 +53,7 @@ export const AWindowTitle = () => {
       <Window
         width={300}
         title={
-          <WindowTitle
-            inactive={boolean('Inactive', false)}
-            title={text('Window title', 'A window title')}
-          >
+          <WindowTitle>
             <MinimizeButton />
             <MaximizeButton />
             <CloseButton />
@@ -71,10 +63,7 @@ export const AWindowTitle = () => {
       <Window
         width={300}
         title={
-          <WindowTitle
-            inactive={boolean('Inactive', false)}
-            title={text('Window title', 'A window title')}
-          >
+          <WindowTitle>
             <HelpButton />
             <CloseButton />
           </WindowTitle>
@@ -83,10 +72,7 @@ export const AWindowTitle = () => {
       <Window
         width={300}
         title={
-          <WindowTitle
-            inactive={boolean('Inactive', false)}
-            title={text('Window title', 'A window title')}
-          >
+          <WindowTitle>
             <RestoreButton />
             <CloseButton />
           </WindowTitle>

@@ -50,17 +50,25 @@
     "@storybook/testing-library": "0.2.0",
     "@types/react": "^18.2.20",
     "react": "^18.2.0",
-    "react-dom": "18.2.0",
+    "react-dom": "^18.2.0",
     "rollup": "^3.28.0",
     "rollup-plugin-dts": "^6.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-scss": "^4.0.0",
     "rollup-plugin-terser": "^7.0.2",
+    "sass": "^1.66.1",
     "storybook": "7.3.2",
     "tslib": "^2.6.2",
     "typescript": "^5.1.6"
   },
   "resolutions": {
     "jackspeak": "2.1.1"
+  },
+  "peerDependencies": {
+    "98.css": "^0.1.20",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "dependencies": {
     "clsx": "^2.0.0"

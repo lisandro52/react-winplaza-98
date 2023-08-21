@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
-import './Button.css';
+import './button.scss';
 
 export interface ButtonProps extends React.ComponentProps<'button'> {
   active?: boolean;
@@ -8,7 +8,7 @@ export interface ButtonProps extends React.ComponentProps<'button'> {
   children: string;
 }
 
-export const Button = ({
+const Button = ({
   active,
   children,
   className,
