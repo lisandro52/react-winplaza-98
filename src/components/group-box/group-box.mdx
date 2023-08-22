@@ -1,0 +1,23 @@
+{/* Button.mdx */}
+
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as GroupBoxStories from './group-box.stories';
+
+<Meta of={GroupBoxStories} />
+
+# OptionButton
+
+<blockquote>
+  A <em>group box</em> is a special control you can use to organize a set of controls. A group box is a rectangular frame with an optional label that surrounds a set of controls. 
+
+  <footer>— Microsoft Windows User Experience p. 189</footer>
+</blockquote>
+
+A `GroupBox` serves as a container or a set of controls. It can be used to group related controls. It can also be used to visually separate a set of controls from the rest of the interface. It contains a sunken outer border and a raised inner border, resembling an engraved box around the controls. It can also contain a label.
+
+<Canvas of={GroupBoxStories.Default} />
+
+`OptionButton`s can also be `disabled`. If you want to mark an `OptionButton` as default, use the `defaultValue` prop from the `OptionGroup`.
+
+<Canvas of={GroupBoxStories.Disabled} />
