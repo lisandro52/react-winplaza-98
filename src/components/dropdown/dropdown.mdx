@@ -1,0 +1,21 @@
+import { Canvas, Meta } from '@storybook/blocks';
+
+import * as DropdownStories from './dropdown.stories';
+
+<Meta of={DropdownStories} />
+
+# Button
+
+<blockquote>
+  A <em>drop-down list box</em> allows the selection of only a single item from a list. In its closed state, the control displays the current value for the control. The user opens the list to change the value. 
+
+  <footer>— Microsoft Windows User Experience p. 175</footer>
+</blockquote>
+
+Dropdowns can be rendered using the `Dropdown` and `Dropdown.Option` components.
+
+<Canvas of={DropdownStories.Default} />
+
+By default, the first option will be selected. You can change this by using the `defaultValue` prop on the `Dropdown` component.
+
+<Canvas of={DropdownStories.Selected} />
