@@ -1,11 +1,11 @@
 import clsx from 'clsx';
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useId } from 'react';
 
 type OmitProperties = 'id' | 'name';
 
 interface TextAreaProps
   extends Omit<React.ComponentProps<'textarea'>, OmitProperties> {
-  id: string;
+  name: string;
   label?: string;
   labelPosition?: 'left' | 'top';
 }
@@ -13,7 +13,7 @@ interface TextAreaProps
 const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
   (
     {
-      id,
+      name,
       label,
       labelPosition = 'top',
       className,
@@ -21,6 +21,7 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
     }: TextAreaProps,
     ref
   ) => {
+    const inputId = useId();
     return (
       <div
         className={clsx(className, {
@@ -28,8 +29,8 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
           'field-row-stacked': labelPosition === 'top',
         })}
       >
-        <label htmlFor={id}>{label}</label>
-        <textarea id={id} name={id} {...inputProps} />
+        <label htmlFor={inputId}>{label}</label>
+        <textarea ref={ref} id={inputId} name={name} {...inputProps} />
       </div>
     );
   }

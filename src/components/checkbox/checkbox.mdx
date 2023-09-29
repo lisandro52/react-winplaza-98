@@ -1,6 +1,6 @@
 {/* Button.mdx */}
 
-import { Canvas, Meta } from '@storybook/blocks';
+import { Canvas, Meta, Controls } from '@storybook/blocks';
 
 import * as CheckboxStores from './checkbox.stories';
 
@@ -17,7 +17,7 @@ import * as CheckboxStores from './checkbox.stories';
 
 Checkboxes are represented with a sunken panel, populated with a "check" icon when selected, next to a label indicating the choice. 
 
-Note: You **must** include a corresponding label for your checkbox, using the `label` attribute and give an `id` to your input. This ensures the checkbox is easy to use with assistive technologies, on top of ensuring a good user experience for all (navigating with the tab key, being able to click the entire label to select the box). 
+Note: You **must** include a corresponding label for your checkbox, using the `label` attribute and give a `name` to your input. This ensures the checkbox is easy to use with assistive technologies, on top of ensuring a good user experience for all (navigating with the tab key, being able to click the entire label to select the box). 
 
 <Canvas of={CheckboxStores.Default} />
 
@@ -31,3 +31,5 @@ If you just want to provide the initial value, use the `defaultChecked` attribut
 <Canvas of={CheckboxStores.CheckedDisabled} />
 
 // Todo: Add the part about the `field-row` component/class.
+
+<Controls />

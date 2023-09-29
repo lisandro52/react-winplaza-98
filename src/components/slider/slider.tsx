@@ -1,9 +1,9 @@
 import clsx from 'clsx';
-import React from 'react';
+import React, { useId } from 'react';
 
 type OmitProperties =
   | 'type'
-  | 'name'
+  | 'id'
   | 'min'
   | 'max'
   | 'defaultChecked'
@@ -12,7 +12,7 @@ type OmitProperties =
 
 interface SliderProps
   extends Omit<React.ComponentProps<'input'>, OmitProperties> {
-  id: string;
+  name: string;
   label?: string;
   minLabel?: string;
   maxLabel?: string;
@@ -28,7 +28,7 @@ interface SliderProps
 }
 
 const Slider = ({
-  id,
+  name,
   label,
   minLabel,
   maxLabel,
@@ -40,10 +40,12 @@ const Slider = ({
   onChange,
   ...inputProps
 }: SliderProps) => {
+  const inputId = useId();
+
   return (
     <div className="field-row">
-      <label htmlFor={`${id}-label`}>{label}</label>
-      {minLabel && <label htmlFor={id}>{minLabel}</label>}
+      <label htmlFor={`${inputId}-label`}>{label}</label>
+      {minLabel && <label htmlFor={inputId}>{minLabel}</label>}
       <div className={clsx(vertical && 'is-vertical')}>
         <input
           {...inputProps}
@@ -53,14 +55,14 @@ const Slider = ({
           className={clsx(className, {
             'has-box-indicator': boxIndicator,
           })}
-          id={id}
-          name={id}
+          id={inputId}
+          name={name}
           type="range"
           min={min}
           max={max}
         />
       </div>
-      {maxLabel && <label htmlFor={`${id}-high`}>{maxLabel}</label>}
+      {maxLabel && <label htmlFor={`${inputId}-high`}>{maxLabel}</label>}
     </div>
   );
 };

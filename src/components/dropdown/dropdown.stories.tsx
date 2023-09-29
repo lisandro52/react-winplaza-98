@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 
-import Dropdown from './dropdown';
+import { Dropdown } from './dropdown';
 
 import Win98Provider from '../theme-providers/win98-theme';
 
@@ -16,7 +16,7 @@ type Story = StoryObj<typeof Dropdown>;
 export const Default: Story = {
   render: () => (
     <Win98Provider>
-      <Dropdown id="default">
+      <Dropdown name="default">
         <Dropdown.Option value="1">Option 1</Dropdown.Option>
         <Dropdown.Option value="2">Option 2</Dropdown.Option>
         <Dropdown.Option value="3">Option 3</Dropdown.Option>
@@ -29,7 +29,7 @@ export const Default: Story = {
 export const Selected: Story = {
   render: () => (
     <Win98Provider>
-      <Dropdown id="selected" defaultValue="3">
+      <Dropdown name="selected" defaultValue="3">
         <Dropdown.Option value="1">Option 1</Dropdown.Option>
         <Dropdown.Option value="2">Option 2</Dropdown.Option>
         <Dropdown.Option value="3">Option 3</Dropdown.Option>

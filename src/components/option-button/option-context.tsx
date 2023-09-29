@@ -1,7 +1,7 @@
 import React, { createContext, useContext } from 'react';
 
 interface OptionContextProps {
-  id: string;
+  name: string;
   value?: string;
   defaultValue?: string;
   onChange?: (value: string) => void;

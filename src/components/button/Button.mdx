@@ -1,6 +1,4 @@
-{/* Button.mdx */}
-
-import { Canvas, Meta } from '@storybook/blocks';
+import { Canvas, Meta, Controls } from '@storybook/blocks';
 
 import * as ButtonStories from './button.stories';
 
@@ -16,6 +14,7 @@ import * as ButtonStories from './button.stories';
 </blockquote>
 
 A standard button measures 75px wide and 23px tall, with a raised outer and inner border. They are given 12px of horizontal padding by default.
+The component can receive any property that a native `<button>` element can receive.
 
 <Canvas of={ButtonStories.Default} />
 
@@ -30,3 +29,7 @@ Disabled buttons maintain the same raised border, but have a "washed out" appear
 Button focus is communicated with a dotted border, set 4px within the contents of the button. The following example is simulated to be focused.
 
 <Canvas of={ButtonStories.Focused} />
+
+## Props
+
+<Controls />

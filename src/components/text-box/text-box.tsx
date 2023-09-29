@@ -1,12 +1,12 @@
 import clsx from 'clsx';
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useId } from 'react';
 
-type OmitProperties = 'type' | 'id' | 'name';
+type OmitProperties = 'type' | 'id';
 
 interface TextBoxProps
   extends Omit<React.ComponentProps<'input'>, OmitProperties> {
   type?: 'text' | 'email' | 'password' | 'number' | 'tel';
-  id: string;
+  name: string;
   label?: string;
   labelPosition?: 'left' | 'top';
 }
@@ -15,7 +15,7 @@ const TextBox = forwardRef<HTMLInputElement, TextBoxProps>(
   (
     {
       type = 'text',
-      id,
+      name,
       label,
       labelPosition = 'left',
       className,
@@ -23,6 +23,7 @@ const TextBox = forwardRef<HTMLInputElement, TextBoxProps>(
     }: TextBoxProps,
     ref
   ) => {
+    const inputId = useId();
     return (
       <div
         className={clsx(className, {
@@ -30,8 +31,8 @@ const TextBox = forwardRef<HTMLInputElement, TextBoxProps>(
           'field-row-stacked': labelPosition === 'top',
         })}
       >
-        <label htmlFor={id}>{label}</label>
-        <input id={id} name={id} type={type} {...inputProps} />
+        <label htmlFor={inputId}>{label}</label>
+        <input id={inputId} name={name} type={type} {...inputProps} />
       </div>
     );
   }
