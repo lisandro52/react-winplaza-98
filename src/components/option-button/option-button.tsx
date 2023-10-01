@@ -1,4 +1,4 @@
-import React, { useId } from 'react';
+import React, { forwardRef, useId } from 'react';
 import { useOptionContext } from './option-context';
 
 type OmittedProps =
@@ -43,24 +43,27 @@ interface OptionButtonProps
  * - The `value` prop is required and represents the value associated with the radio button.
  * - This component is designed to work within an `OptionGroup` to manage a group of radio options.
  */
-export const OptionButton = ({ label, ...inputProps }: OptionButtonProps) => {
-  const inputId = useId();
-  const { name, value, onChange, defaultValue } = useOptionContext();
+export const OptionButton = forwardRef<HTMLInputElement, OptionButtonProps>(
+  ({ label, ...inputProps }: OptionButtonProps, ref) => {
+    const inputId = useId();
+    const { name, value, onChange, defaultValue } = useOptionContext();
 
-  return (
-    <div className="field-row">
-      <input
-        id={inputId}
-        type="radio"
-        name={name}
-        {...inputProps}
-        defaultChecked={
-          defaultValue ? defaultValue === inputProps.value : undefined
-        }
-        checked={value ? value === inputProps.value : undefined}
-        onChange={(e) => onChange?.(e.target.value)}
-      />
-      <label htmlFor={inputId}>{label}</label>
-    </div>
-  );
-};
+    return (
+      <div className="field-row">
+        <input
+          id={inputId}
+          type="radio"
+          name={name}
+          {...inputProps}
+          ref={ref}
+          defaultChecked={
+            defaultValue ? defaultValue === inputProps.value : undefined
+          }
+          checked={value ? value === inputProps.value : undefined}
+          onChange={(e) => onChange?.(e.target.value)}
+        />
+        <label htmlFor={inputId}>{label}</label>
+      </div>
+    );
+  }
+);
