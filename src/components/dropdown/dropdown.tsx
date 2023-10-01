@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 /**
  * Props for the DropdownOption component.
@@ -25,13 +25,13 @@ interface DropdownOptionProps
  *
  * ```tsx
  * <Dropdown>
- *   <Dropdown.Option value="option1">Option 1</DropdownOption>
- *   <Dropdown.Option value="option2">Option 2</DropdownOption>
- *   <Dropdown.Option value="option3">Option 3</DropdownOption>
+ *   <DropdownOption value="option1">Option 1</DropdownOption>
+ *   <DropdownOption value="option2">Option 2</DropdownOption>
+ *   <DropdownOption value="option3">Option 3</DropdownOption>
  * </Dropdown>
  * ```
  */
-const DropdownOption = ({ children, ...optionProps }: DropdownOptionProps) => {
+export const DropdownOption = ({ children, ...optionProps }: DropdownOptionProps) => {
   return <option {...optionProps}>{children}</option>;
 };
 
@@ -58,30 +58,24 @@ interface DropdownProps extends React.ComponentProps<'select'> {
  * @remarks
  * This component can be used to create a dropdown/select input with custom styling
  * and behavior by extending the native `select` element. It works seamlessly with
- * the Dropdown.Option component to provide options.
+ * the DropdownOption component to provide options.
  *
  * @example Creating a dropdown with options
  *
  * ```tsx
  * <Dropdown name="example" label="Select an option">
- *   <Dropdown.Option value="option1">Option 1</DropdownOption>
- *   <Dropdown.Option value="option2">Option 2</DropdownOption>
- *   <Dropdown.Option value="option3">Option 3</DropdownOption>
+ *   <DropdownOption value="option1">Option 1</DropdownOption>
+ *   <DropdownOption value="option2">Option 2</DropdownOption>
+ *   <DropdownOption value="option3">Option 3</DropdownOption>
  * </Dropdown>
  * ```
  */
-export const Dropdown = ({
-  name,
-  label,
-  children,
-  ...selectProps
-}: DropdownProps) => {
-  return (
-    <select name={name} {...selectProps}>
-      {children}
-    </select>
-  );
-};
-
-
-Dropdown.Option = DropdownOption;
+export const Dropdown = forwardRef<HTMLSelectElement, DropdownProps>(
+  ({ name, label, children, ...selectProps }: DropdownProps, ref) => {
+    return (
+      <select ref={ref} name={name} {...selectProps}>
+        {children}
+      </select>
+    );
+  }
+);
