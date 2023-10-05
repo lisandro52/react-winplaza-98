@@ -29,7 +29,7 @@ type CheckboxProps = {
  * @remarks
  * - The `name` prop is required and specifies the name attribute for the checkbox input.
  */
-export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
+const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
   ({ name, label, ...inputProps }: CheckboxProps, ref) => {
     return (
       <>
@@ -39,3 +39,5 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
     );
   }
 );
+
+export default Checkbox;

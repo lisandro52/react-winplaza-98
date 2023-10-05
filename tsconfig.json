@@ -9,7 +9,7 @@
     ],
     "declaration": true,
     "declarationDir": "types",
-    "emitDeclarationOnly": true,
+    "emitDeclarationOnly": false,
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,

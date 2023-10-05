@@ -51,6 +51,7 @@
     "@types/react": "^18.2.20",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-styleguidist": "^13.1.1",
     "rollup": "^3.28.0",
     "rollup-plugin-dts": "^6.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
@@ -60,6 +61,7 @@
     "sass": "^1.66.1",
     "storybook": "7.3.2",
     "tslib": "^2.6.2",
+    "ts-loader": "^9.4.4",
     "typescript": "^5.1.6"
   },
   "resolutions": {
