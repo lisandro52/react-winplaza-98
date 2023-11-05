@@ -8,7 +8,7 @@ export interface WindowProps {
   children?: React.ReactNode;
 }
 
-export const Window = ({ title, statusBar, width, children }: WindowProps) => {
+const Window = ({ title, statusBar, width, children }: WindowProps) => {
   return (
     <div className="window" style={{ width }}>
       {title}

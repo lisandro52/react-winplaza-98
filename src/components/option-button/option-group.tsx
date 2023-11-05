@@ -52,10 +52,12 @@ interface OptionGroupProps {
  * - The `defaultValue` prop sets the default selected value when no value is specified.
  * - The `onChange` prop can be used to handle value changes within the group.
  */
-export const OptionGroup = (props: OptionGroupProps) => {
+const OptionGroup = (props: OptionGroupProps) => {
   return (
     <OptionContext.Provider value={props}>
       {props.children}
     </OptionContext.Provider>
   );
 };
+
+export default OptionGroup;

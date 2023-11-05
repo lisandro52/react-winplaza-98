@@ -1,12 +1,3 @@
-{/* Button.mdx */}
-
-import { Canvas, Meta } from '@storybook/blocks';
-
-import * as OptionButtonStories from './option-button.stories';
-
-<Meta of={OptionButtonStories} />
-
-# OptionButton
 
 <blockquote>
   An <em>option button</em>, also referred to as a radio button, represents a single choice within a limited set of mutually exclusive choices. That is, the user can choose only one set of options. 
@@ -18,8 +9,19 @@ import * as OptionButtonStories from './option-button.stories';
 You have to provide an `OptionGroup` with an `id` prop. Each `OptionButton` in the group must have a `value` prop that is unique within the group,
 and must also have a `label`. The `OptionButton` also can receive any other props that an `input` can receive.
 
-<Canvas of={OptionButtonStories.Default} />
+```jsx
+<OptionGroup name="default">
+  <OptionButton label="Yes" value="Yes" />
+  <OptionButton label="No" value="No" />
+</OptionGroup>
+```
 
 `OptionButton`s can also be `disabled`. If you want to mark an `OptionButton` as default, use the `defaultValue` prop from the `OptionGroup`.
 
-<Canvas of={OptionButtonStories.Disabled} />
+```jsx
+<OptionGroup name="disabled" defaultValue="2">
+  <OptionButton label="Option 1" value="1" />
+  <OptionButton label="Option 2" value="2" disabled />
+  <OptionButton label="Option 3" value="3" disabled />
+</OptionGroup>
+```
