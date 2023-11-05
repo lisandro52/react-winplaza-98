@@ -1,4 +1,5 @@
 import React from 'react';
+import TextBox from '../components/text-box/text-box';
 
 const TableOfContentsRenderer = ({
   children,
@@ -10,11 +11,13 @@ const TableOfContentsRenderer = ({
       <div className="desktop-nav">
         <nav>
           <div>
-            <input
+            <TextBox
+              name="search"
               value={searchTerm}
-              placeholder="Filter by name"
-              aria-label="Filter by name"
               onChange={(event) => onSearchTermChange(event.target.value)}
+              labelPosition="top"
+              label="Filter by name"
+              aria-label="Filter by name"
             />
           </div>
           {children}

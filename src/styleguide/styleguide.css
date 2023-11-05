@@ -8,7 +8,8 @@ body {
     padding: 0;
   }
 
-  .desktop-sidebar {
+  .desktop-sidebar,
+  .desktop-nav {
     display: none;
   }
   .mobile-nav {
@@ -31,6 +32,7 @@ body {
     border-right: 1px solid #000;
     border-bottom: 1px solid #000;
     padding-bottom: 1rem;
+    padding-top: 0.5rem;
   }
 
   .start-menu ul {
