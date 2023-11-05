@@ -19,7 +19,7 @@ interface ButtonProps extends React.ComponentProps<'button'> {
   /**
    * The text or content to be displayed inside the button.
    */
-  children: string;
+  children: React.ReactNode;
 }
 
 /**
@@ -30,7 +30,7 @@ interface ButtonProps extends React.ComponentProps<'button'> {
  * @remarks
  * - You can use the `active` prop to set the button's active state.
  * - The `focused` prop can be used to indicate whether the button is currently focused.
- * 
+ *
  * @example Creating a button
  *
  * ```tsx
