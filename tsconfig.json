@@ -2,14 +2,10 @@
   "compilerOptions": {
     "outDir": "lib/esm",
     "target": "ESNext",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "declaration": true,
     "declarationDir": "types",
-    "emitDeclarationOnly": true,
+    "emitDeclarationOnly": false,
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -23,9 +19,7 @@
     "isolatedModules": true,
     "jsx": "react"
   },
-  "include": [
-    "src"
-  ],
+  "include": ["src", "types"],
   "exclude": [
     "dist",
     "node_modules",

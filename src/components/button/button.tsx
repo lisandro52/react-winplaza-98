@@ -1,11 +1,11 @@
 import clsx from 'clsx';
 import React from 'react';
-import './button.scss';
+import './button.css';
 
 /**
  * Props for the Button component.
  */
-export interface ButtonProps extends React.ComponentProps<'button'> {
+interface ButtonProps extends React.ComponentProps<'button'> {
   /**
    * Specifies whether the button is in an active state.
    */
@@ -19,24 +19,25 @@ export interface ButtonProps extends React.ComponentProps<'button'> {
   /**
    * The text or content to be displayed inside the button.
    */
-  children: string;
+  children: React.ReactNode;
 }
 
-/** *
- * This component represents a button element that can be 
- * configured using the provided props.
+/**
+ * A Win98 themed button React component.
+ *
+ * This component extends the native HTML `button` element with additional props.
+ *
+ * @remarks
+ * - You can use the `active` prop to set the button's active state.
+ * - The `focused` prop can be used to indicate whether the button is currently focused.
  *
  * @example Creating a button
  *
  * ```tsx
  * <Button onClick={handleClick} disabled>Click me</Button>
  * ```
- *
- * @remarks
- * - You can use the `active` prop to set the button's active state.
- * - The `focused` prop can be used to indicate whether the button is currently focused.
  */
-export const Button = ({
+const Button = ({
   active,
   children,
   className,
@@ -52,3 +53,5 @@ export const Button = ({
     </button>
   );
 };
+
+export default Button;

@@ -1,11 +1,3 @@
-import { Canvas, Meta, Controls } from '@storybook/blocks';
-
-import * as ButtonStories from './button.stories';
-
-<Meta of={ButtonStories} />
-
-# Button
-
 <blockquote>
   A <em>command button</em>, also referred to as a push button, is a control
   that causes the application to perform some action when the user clicks it.
@@ -16,20 +8,24 @@ import * as ButtonStories from './button.stories';
 A standard button measures 75px wide and 23px tall, with a raised outer and inner border. They are given 12px of horizontal padding by default.
 The component can receive any property that a native `<button>` element can receive.
 
-<Canvas of={ButtonStories.Default} />
+```jsx padded
+<Button>Push me</Button>
+```
 
 When buttons are clicked, the raised borders become sunken. The following button is simulated to be in the pressed (active) state.
 
-<Canvas of={ButtonStories.Active} />
+```jsx padded
+<Button active>Push me</Button>
+```
 
 Disabled buttons maintain the same raised border, but have a "washed out" appearance in their label.
 
-<Canvas of={ButtonStories.Disabled} />
+```jsx padded
+<Button disabled>Push me</Button>
+```
 
 Button focus is communicated with a dotted border, set 4px within the contents of the button. The following example is simulated to be focused.
 
-<Canvas of={ButtonStories.Focused} />
-
-## Props
-
-<Controls />
+```jsx padded
+<Button focused>Push me</Button>
+```

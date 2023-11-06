@@ -43,7 +43,7 @@ interface OptionButtonProps
  * - The `value` prop is required and represents the value associated with the radio button.
  * - This component is designed to work within an `OptionGroup` to manage a group of radio options.
  */
-export const OptionButton = forwardRef<HTMLInputElement, OptionButtonProps>(
+const OptionButton = forwardRef<HTMLInputElement, OptionButtonProps>(
   ({ label, ...inputProps }: OptionButtonProps, ref) => {
     const inputId = useId();
     const { name, value, onChange, defaultValue } = useOptionContext();
@@ -67,3 +67,5 @@ export const OptionButton = forwardRef<HTMLInputElement, OptionButtonProps>(
     );
   }
 );
+
+export default OptionButton;

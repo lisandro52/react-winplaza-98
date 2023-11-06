@@ -1,20 +1,34 @@
-import { Canvas, Meta } from '@storybook/blocks';
-
-import * as TextAreaStories from './text-area.stories';
-
-<Meta of={TextAreaStories} />
-
-# TextArea
-
 `TextAreas` are very similar to `TextBoxes`, but they are multi-line. They can be resized by dragging the bottom right corner. They can also be disabled with the `disabled` property.
 `rows` and `cols` attributes to allow you to specify an exact size for the `TextArea` to take. Setting these is a good idea for consistency, as browser defaults can differ.
 
-<Canvas of={TextAreaStories.Default} />
+```jsx
+<TextArea
+  id="default"
+  label="A big, ol' textarea"
+  rows={6}
+  style={{ maxWidth: 200 }}
+/>
+```
 
 With the `labelPosition` property, you can change the position of the label to either `top` or `left`. `top` is the default.
 
-<Canvas of={TextAreaStories.LabelPosition} />
+```jsx
+<TextArea
+  id="add1"
+  label="A left label"
+  labelPosition="left"
+  style={{ maxWidth: 200 }}
+/>
+```
 
-Text boxes can be disabled with the `disabled` property.
+Text areas can be disabled with the `disabled` property.
 
-<Canvas of={TextAreaStories.Disabled} />
+```jsx
+<TextArea
+  id="disabled"
+  label="Occupation"
+  disabled
+  value="Garden keeper"
+  style={{ maxWidth: 200 }}
+/>
+```
