@@ -11,31 +11,29 @@ interface TextBoxProps
   labelPosition?: 'left' | 'top';
 }
 
-const TextBox = forwardRef<HTMLInputElement, TextBoxProps>(
-  (
-    {
-      type = 'text',
-      name,
-      label,
-      labelPosition = 'left',
-      className,
-      ...inputProps
-    }: TextBoxProps,
-    ref
-  ) => {
-    const inputId = useId();
-    return (
-      <div
-        className={clsx(className, {
-          'field-row': labelPosition === 'left',
-          'field-row-stacked': labelPosition === 'top',
-        })}
-      >
-        <label htmlFor={inputId}>{label}</label>
-        <input id={inputId} name={name} type={type} {...inputProps} />
-      </div>
-    );
-  }
-);
+const TextBox = forwardRef<HTMLInputElement, TextBoxProps>(function TextBox(
+  {
+    type = 'text',
+    name,
+    label,
+    labelPosition = 'left',
+    className,
+    ...inputProps
+  }: TextBoxProps,
+  ref
+) {
+  const inputId = useId();
+  return (
+    <div
+      className={clsx(className, {
+        'field-row': labelPosition === 'left',
+        'field-row-stacked': labelPosition === 'top',
+      })}
+    >
+      <label htmlFor={inputId}>{label}</label>
+      <input id={inputId} name={name} type={type} ref={ref} {...inputProps} />
+    </div>
+  );
+});
 
 export default TextBox;

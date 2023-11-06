@@ -1,6 +1,6 @@
 {
   "name": "react-winplaza-98",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "description": "React components with a Win98 a e s t h e c t i c",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -39,6 +39,7 @@
     "@rollup/plugin-node-resolve": "^15.2.0",
     "@rollup/plugin-typescript": "^11.1.2",
     "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.14",
     "css-loader": "^6.8.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.3",
