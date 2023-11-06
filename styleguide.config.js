@@ -13,5 +13,6 @@ module.exports = {
       __dirname,
       'src/styleguide/toc-renderer.tsx'
     ),
+    // Wrapper: path.join(__dirname, 'src/styleguide/wrapper.tsx'),
   },
 };
