@@ -5,5 +5,5 @@ export interface WindowProps {
     width?: string | number;
     children?: React.ReactNode;
 }
-export declare const Window: ({ title, statusBar, width, children }: WindowProps) => React.JSX.Element;
+declare const Window: ({ title, statusBar, width, children }: WindowProps) => React.JSX.Element;
 export default Window;

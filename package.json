@@ -1,6 +1,6 @@
 {
   "name": "react-winplaza-98",
-  "version": "0.3.0",
+  "version": "0.3.3",
   "description": "React components with a Win98 a e s t h e c t i c",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -62,7 +62,6 @@
     "jackspeak": "2.1.1"
   },
   "peerDependencies": {
-    "98.css": "^0.1.20",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
