@@ -5,6 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c --bundleConfigAsCjs",
+    "build:docs": "npx styleguidist build",
     "styleguide": "npx styleguidist server"
   },
   "author": "",
