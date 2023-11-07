@@ -3,7 +3,7 @@ name: Docs deployment # name of the workflo
 on:
   push:
     branches:
-      - gh-pages # branch name
+      - master # branch name
 
 jobs:
   deploy-docs-to-gh-pages:
