@@ -17,8 +17,12 @@ module.exports = {
   },
   sections: [
     {
-      name: 'Getting started',
+      name: '',
       sections: [
+        {
+          name: '',
+          content: 'src/docs/why.md',
+        },
         {
           name: 'Installation',
           content: 'src/docs/installation.md',
