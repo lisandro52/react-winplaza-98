@@ -17,10 +17,10 @@ module.exports = {
   },
   sections: [
     {
-      name: '',
+      name: 'Intro',
       sections: [
         {
-          name: '',
+          name: 'Why a library for this?',
           content: 'src/docs/why.md',
         },
         {
