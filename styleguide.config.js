@@ -1,7 +1,7 @@
 const path = require('path');
 module.exports = {
   skipComponentsWithoutExample: true,
-
+  styleguideDir: 'docs',
   components: 'src/components/**/*.tsx',
   require: [path.resolve(__dirname, 'src/styleguide/setup.js')],
   styleguideComponents: {
@@ -15,4 +15,23 @@ module.exports = {
     ),
     // Wrapper: path.join(__dirname, 'src/styleguide/wrapper.tsx'),
   },
+  sections: [
+    {
+      name: 'Getting started',
+      sections: [
+        {
+          name: 'Installation',
+          content: 'src/docs/installation.md',
+        },
+        {
+          name: 'Configuration',
+          content: 'src/docs/configuration.md',
+        },
+      ],
+    },
+    {
+      name: 'Components API',
+      components: 'src/components/**/*.tsx',
+    },
+  ],
 };

@@ -21,8 +21,15 @@ const StyleGuideRenderer = ({
             <h1>React Winplaza 98</h1>
             <hr />
             <p className="subtitle">
-              React components for creating a Win98-like web interface.
+              React components for an <i>a e s t h e t i c</i> web interface.
             </p>
+            <a href="https://badge.fury.io/js/react-winplaza-98">
+              <img
+                src="https://badge.fury.io/js/react-winplaza-98.svg"
+                alt="npm version"
+                height="18"
+              />
+            </a>
           </div>
           {version && <h2>{version}</h2>}
           <div className="content">
